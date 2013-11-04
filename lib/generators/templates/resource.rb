@@ -1,9 +1,5 @@
-module BookIt
+class Resource < ActiveRecord::Base
+  validates :name, presence: true, uniqueness: true
 
-  class Resource < ActiveRecord::Base
-    validates :name, presence: true, uniqueness: true
-
-    has_many :bookings
-  end
-
+  has_many :bookings
 end

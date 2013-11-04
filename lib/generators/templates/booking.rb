@@ -1,7 +1,3 @@
-module BookIt
-
-  class Booking < ActiveRecord::Base
-    include Bookable
-  end
-
+class Booking < ActiveRecord::Base
+  include Bookable
 end

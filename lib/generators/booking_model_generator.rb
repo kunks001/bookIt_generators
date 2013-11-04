@@ -18,6 +18,8 @@ class BookingModelGenerator < Rails::Generators::Base
         "\t\tcreate_table :bookings do |t|\n"\
           "\t\t\tt.datetime :start_time\n"\
           "\t\t\tt.datetime :end_time\n"\
+          "\t\t\tt.integer :length\n"\
+          "\t\t\tt.integer :resource_id\n"\
           "\t\t\tt.timestamps\n"\
         "\t\tend\n"\
       "\tend\n"\
