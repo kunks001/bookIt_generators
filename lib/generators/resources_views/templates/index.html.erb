@@ -1,11 +1,11 @@
-<h3>Resources</h3>
+<h3><%=folder_name.singularize%></h3>
 
-<%% @resources.each do |resource| %>
+<%% @<%=folder_name%>.each do |resource| %>
   <div class="resource">
     <%%= resource.name %>
-    <%%= link_to "Show all bookings", resource_bookings_path(resource) %>
-    <%%= link_to "Delete", resource_path(resource), data: { confirm: 'Are you sure?' }, method: :delete %>
-    <%%= link_to "Edit", edit_resource_path(resource) %>
-    <%%= link_to "Add booking", new_resource_booking_path(resource) %>
+    <%%= link_to "Show all bookings", <%=folder_name.singularize%>_bookings_path(<%=folder_name.singularize%>) %>
+    <%%= link_to "Delete", <%=folder_name.singularize%>_path(<%=folder_name.singularize%>), data: { confirm: 'Are you sure?' }, method: :delete %>
+    <%%= link_to "Edit", edit_<%=folder_name.singularize%>_path(<%=folder_name.singularize%>) %>
+    <%%= link_to "Add booking", new_<%=folder_name.singularize%>_booking_path(<%=folder_name.singularize%>) %>
   </div>
 <%% end %>
