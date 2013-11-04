@@ -17,7 +17,6 @@ class ResourceModelGenerator < Rails::Generators::Base
       "\tdef change\n"\
         "\t\tcreate_table :#{resource_name.pluralize} do |t|\n"\
           "\t\t\tt.string :name\n"\
-
           "\t\t\tt.timestamps\n"\
         "\t\tend\n"\
       "\tend\n"\
