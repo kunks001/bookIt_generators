@@ -1,4 +1,4 @@
-<h3> Bookings for <%= @resource.name %></h3>
+<h3> Bookings for <%= @tennis_court.name %></h3>
 <table>
   <tr>
     <th>Start</th>
@@ -13,9 +13,9 @@
     <td>
       <%= booking.calculate_end_time.strftime('%e %b %Y %H:%M%p') %>
     </td>
-    <td><%= link_to "Delete", resource_booking_path(@resource, booking), data: { confirm: 'Are you sure?' }, method: :delete %>
+    <td><%= link_to "Delete", tennis_court_booking_path(@tennis_court, booking), data: { confirm: 'Are you sure?' }, method: :delete %>
     </td>
-    <td><%= link_to "Edit", edit_resource_booking_path(@resource, booking) %>
+    <td><%= link_to "Edit", edit_tennis_court_booking_path(@tennis_court, booking) %>
     </td>
   </tr>
   <% end %>
